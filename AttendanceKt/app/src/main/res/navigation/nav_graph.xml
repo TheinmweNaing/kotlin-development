@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/memberListFragment">
+    <fragment
+        android:id="@+id/memberListFragment"
+        android:name="com.team.attendancekt.ui.member.MemberListFragment"
+        android:label="MemberListFragment"
+        tools:layout="@layout/fragment_member_list" >
+        <action
+            android:id="@+id/action_memberListFragment_to_memberEditFragment"
+            app:destination="@id/memberEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memberEditFragment"
+        android:name="com.team.attendancekt.ui.member.MemberEditFragment"
+        android:label="MemberEditFragment"
+        tools:layout="@layout/fragment_member_edit" />
+</navigation>
