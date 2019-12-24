@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data class="MemberEditBinding">
+
         <import type="android.view.View" />
+
         <variable
             name="vm"
             type="com.team.attendancekt.ui.member.MemberEditViewModel" />
@@ -120,6 +122,7 @@
             app:layout_constraintEnd_toEndOf="@+id/textInputLayout7"
             app:layout_constraintStart_toStartOf="@+id/textInputLayout7"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout7"
+            app:path="@{vm.member.photo}"
             app:srcCompat="@drawable/ic_add_a_photo_black" />
 
         <com.google.android.material.button.MaterialButton

@@ -13,6 +13,8 @@ class MemberRepo(private val dao: MemberDao) {
         }
     }
 
+    fun delete(m: Member) = dao.delete(m)
+
     fun getMember(id: Int) = dao.getMember(id)
 
     fun getAll() = dao.getAll()

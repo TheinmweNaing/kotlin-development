@@ -10,6 +10,14 @@
         </item>
         <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox
         </item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialog</item>
     </style>
 
+    <style name="AppBottomSheetDialog" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppBottomDesign</item>
+    </style>
+
+    <style name="AppBottomDesign" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
 </resources>

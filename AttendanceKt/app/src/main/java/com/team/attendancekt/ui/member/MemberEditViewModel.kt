@@ -18,6 +18,10 @@ class MemberEditViewModel(application: Application) : AndroidViewModel(applicati
         member.value?.also { memberRepo.save(it) }
     }
 
+    fun delete() {
+        member.value?.also { memberRepo.delete(it) }
+    }
+
     fun init(id: Int) {
         if (id > 0) {
             editMember = memberRepo.getMember(id)
