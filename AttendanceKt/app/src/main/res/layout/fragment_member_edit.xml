@@ -12,145 +12,150 @@
             type="com.team.attendancekt.ui.member.MemberEditViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:hint="@string/member_name"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="match_parent">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                android:text="@={vm.member.name}" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/member_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout4"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="@string/age"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="@={vm.member.name}" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout4"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:text="@={vm.member.age}" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginTop="16dp"
+                android:hint="@string/age"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:hint="@string/phone_number"
-            app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-            app:layout_constraintStart_toEndOf="@+id/textInputLayout4"
-            app:layout_constraintTop_toTopOf="@+id/textInputLayout4">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:text="@={vm.member.age}" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout5"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:text="@={vm.member.phone}" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginStart="16dp"
+                android:hint="@string/phone_number"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+                app:layout_constraintStart_toEndOf="@+id/textInputLayout4"
+                app:layout_constraintTop_toTopOf="@+id/textInputLayout4">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="@string/email"
-            app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout4"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:text="@={vm.member.phone}" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout6"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:text="@={vm.member.email}" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginTop="16dp"
+                android:hint="@string/email"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayout4"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout7"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="@string/barcode"
-            app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout6"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:text="@={vm.member.email}" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout7"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@={vm.member.barcode}" />
+                android:layout_marginTop="16dp"
+                android:hint="@string/barcode"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayout6"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@={vm.member.barcode}" />
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/btnScan"
-            android:layout_width="48dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="4dp"
-            android:background="?attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="@+id/textInputLayout7"
-            app:layout_constraintEnd_toEndOf="@+id/textInputLayout7"
-            app:layout_constraintTop_toTopOf="@+id/textInputLayout7"
-            app:srcCompat="@drawable/ic_scan_qrcode_dark" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/btnTakePhoto"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="16dp"
-            android:scaleType="fitXY"
-            app:layout_constraintEnd_toEndOf="@+id/textInputLayout7"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout7"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout7"
-            app:path="@{vm.member.photo}"
-            app:srcCompat="@drawable/ic_add_a_photo_black" />
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnScan"
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintBottom_toBottomOf="@+id/textInputLayout7"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayout7"
+                app:layout_constraintTop_toTopOf="@+id/textInputLayout7"
+                app:srcCompat="@drawable/ic_scan_qrcode_dark" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSave"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/save"
-            android:textColor="@color/colorPrimary"
-            app:layout_constraintEnd_toEndOf="@+id/textInputLayout7"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout7"
-            app:layout_constraintTop_toBottomOf="@+id/btnTakePhoto"
-            app:strokeColor="@color/colorPrimary" />
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnTakePhoto"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayout7"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayout7"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout7"
+                app:path="@{vm.member.photo}"
+                app:srcCompat="@drawable/ic_add_a_photo_black" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnDelete"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/delete"
-            android:textColor="@color/colorAccent"
-            android:visibility="@{vm.member.id > 0 ? View.VISIBLE : View.GONE}"
-            app:layout_constraintEnd_toEndOf="@+id/btnSave"
-            app:layout_constraintStart_toStartOf="@+id/btnSave"
-            app:layout_constraintTop_toBottomOf="@+id/btnSave"
-            app:strokeColor="@color/colorAccent" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/save"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayout7"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayout7"
+                app:layout_constraintTop_toBottomOf="@+id/btnTakePhoto"
+                app:strokeColor="@color/colorPrimary" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDelete"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/delete"
+                android:textColor="@color/colorAccent"
+                android:visibility="@{vm.member.id > 0 ? View.VISIBLE : View.GONE}"
+                app:layout_constraintEnd_toEndOf="@+id/btnSave"
+                app:layout_constraintStart_toStartOf="@+id/btnSave"
+                app:layout_constraintTop_toBottomOf="@+id/btnSave"
+                app:strokeColor="@color/colorAccent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>
