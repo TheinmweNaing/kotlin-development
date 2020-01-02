@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.team.attendancekt.R
 import kotlinx.android.synthetic.main.fragment_member_attendance.*
@@ -41,6 +42,10 @@ class MemberAttendanceFragment : Fragment() {
             setHasFixedSize(true)
             addItemDecoration(DividerItemDecoration(view.context, DividerItemDecoration.VERTICAL))
             adapter = this@MemberAttendanceFragment.adapter
+        }
+
+        fab.setOnClickListener {
+            findNavController().navigate(R.id.action_memberAttendanceFragment_to_memberAttendanceEditFragment)
         }
     }
 }

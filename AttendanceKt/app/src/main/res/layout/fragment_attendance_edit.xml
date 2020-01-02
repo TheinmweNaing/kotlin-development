@@ -1,51 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:hint="Member"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <data>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="com.team.attendancekt.ui.attendance.edit.MemberAttendanceEditViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/ic_arrow_drop_down_dark"
-            android:inputType="none" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Member"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <RadioGroup
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:checkedButton="@id/rbPresent"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_arrow_drop_down_dark"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <RadioButton
-            android:id="@+id/rbPresent"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Present" />
+            android:layout_marginTop="16dp"
+            android:checkedButton="@id/rbPresent"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
 
-        <RadioButton
-            android:id="@+id/rbAbsent"
-            android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/rbPresent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Present" />
+
+            <RadioButton
+                android:id="@+id/rbAbsent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Absent" />
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Absent" />
-    </RadioGroup>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginTop="8dp"
+            android:text="@string/delete"
+            android:visibility="@{vm.attendanceId >0 ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="@+id/btnSave"
+            app:layout_constraintStart_toStartOf="@+id/btnSave"
+            app:layout_constraintTop_toBottomOf="@+id/btnSave"
+            app:strokeColor="@color/colorAccent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/save"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+            app:layout_constraintStart_toStartOf="@+id/radioGroup"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            app:strokeColor="@color/colorPrimary" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
