@@ -3,8 +3,8 @@ package com.team.attendancekt.ui
 import android.net.Uri
 import android.widget.EditText
 import android.widget.ImageView
-import androidx.databinding.BindingAdapter
-import androidx.databinding.InverseBindingAdapter
+import android.widget.RadioGroup
+import androidx.databinding.*
 
 class BindingUtil {
 
@@ -26,7 +26,17 @@ class BindingUtil {
         @JvmStatic
         @BindingAdapter("path")
         fun setImageUri(imageView: ImageView, imageFilePath: String?) {
-            if (imageFilePath != null && imageFilePath.isNotEmpty()) imageView.setImageURI(Uri.parse(imageFilePath))
+            if (imageFilePath != null && imageFilePath.isNotEmpty()) imageView.setImageURI(
+                Uri.parse(
+                    imageFilePath
+                )
+            )
+        }
+
+        @JvmStatic
+        @BindingAdapter("android:checkedButton")
+        fun setCheckedButton(radioGroup: RadioGroup, id: Int) {
+            if (id != radioGroup.checkedRadioButtonId) radioGroup.check(id)
         }
     }
 }

@@ -18,9 +18,9 @@ data class Attendance(
     val id: Long = 0,
     @ColumnInfo(name = "event_time")
     val eventTime: DateTime = DateTime.now(),
-    val status: Status = Status.PRESENT,
+    var status: Status = Status.PRESENT,
     @ColumnInfo(name = "member_id")
-    val memberId: Int = 0
+    var memberId: Int = 0
 )
 
 enum class Status {

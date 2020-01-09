@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
+    <data >
 
         <import type="android.view.View" />
 
@@ -17,21 +17,23 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout2"
+            android:id="@+id/txtMember"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:hint="Member"
+            android:hint="@string/hint_member"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edMember"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_arrow_drop_down_dark"
+                android:text="@{vm.member.name}"
                 android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -42,23 +44,23 @@
             android:layout_marginTop="16dp"
             android:checkedButton="@id/rbPresent"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
-            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+            app:layout_constraintEnd_toEndOf="@+id/txtMember"
+            app:layout_constraintStart_toStartOf="@+id/txtMember"
+            app:layout_constraintTop_toBottomOf="@+id/txtMember">
 
             <RadioButton
                 android:id="@+id/rbPresent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Present" />
+                android:text="@string/present" />
 
             <RadioButton
                 android:id="@+id/rbAbsent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Absent" />
+                android:text="@string/absent" />
         </RadioGroup>
 
         <com.google.android.material.button.MaterialButton
@@ -68,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/delete"
-            android:visibility="@{vm.attendanceId >0 ? View.VISIBLE : View.GONE}"
+            android:visibility="@{vm.attendance.id > 0 ? View.VISIBLE : View.GONE}"
             app:layout_constraintEnd_toEndOf="@+id/btnSave"
             app:layout_constraintStart_toStartOf="@+id/btnSave"
             app:layout_constraintTop_toBottomOf="@+id/btnSave"
@@ -86,5 +88,16 @@
             app:layout_constraintStart_toStartOf="@+id/radioGroup"
             app:layout_constraintTop_toBottomOf="@+id/radioGroup"
             app:strokeColor="@color/colorPrimary" />
+
+        <Spinner
+            android:id="@+id/spinnerMember"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/txtMember"
+            app:layout_constraintEnd_toEndOf="@+id/txtMember"
+            app:layout_constraintStart_toStartOf="@+id/txtMember"
+            app:layout_constraintTop_toTopOf="@+id/txtMember" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
