@@ -17,6 +17,12 @@ class MemberAttendanceAdapter :
         DIFF_CALLBACK
     ) {
 
+    interface AdapterItemClickListener {
+        fun onClick(position: Int)
+    }
+
+    var adapterItemClickListener: AdapterItemClickListener? = null
+
     companion object {
         private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<MemberAttendance>() {
             override fun areItemsTheSame(
@@ -38,7 +44,12 @@ class MemberAttendanceAdapter :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MemberAttendanceViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val binding = DataBindingUtil.inflate<ViewDataBinding>(inflater, R.layout.layout_member_attendance, parent, false)
+        val binding = DataBindingUtil.inflate<ViewDataBinding>(
+            inflater,
+            R.layout.layout_member_attendance,
+            parent,
+            false
+        )
         return MemberAttendanceViewHolder(binding)
     }
 
@@ -49,6 +60,12 @@ class MemberAttendanceAdapter :
     inner class MemberAttendanceViewHolder(val binding: ViewDataBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        init {
+            itemView.setOnClickListener {
+                adapterItemClickListener?.onClick(adapterPosition)
+            }
+        }
+
         fun bind(obj: MemberAttendance) {
             binding.setVariable(BR.obj, obj)
             binding.executePendingBindings()
@@ -56,5 +73,5 @@ class MemberAttendanceAdapter :
 
     }
 
-
+    fun getItemAt(position: Int) = getItem(position)
 }

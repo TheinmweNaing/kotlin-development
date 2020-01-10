@@ -1,12 +1,14 @@
 package com.team.attendancekt.ui.attendance.edit
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.RadioGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -23,6 +25,10 @@ class MemberAttendanceEditFragment : Fragment() {
     lateinit var memberArrayAdapter: ArrayAdapter<Member>
     lateinit var binding: FragmentAttendanceEditBinding
 
+    companion object {
+        val KEY_MEMBER_ATTENDANCE_ID = "member_attendance_id"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         memberAttendanceEditViewModel =
@@ -32,7 +38,16 @@ class MemberAttendanceEditFragment : Fragment() {
             memberArrayAdapter.addAll(it)
         })
 
-        memberAttendanceEditViewModel.attendanceId.value = 0
+        memberAttendanceEditViewModel.attendance.observe(this, Observer {
+            btnDelete.visibility = if (it.id > 0) View.VISIBLE else View.GONE
+            when(it.status) {
+                Status.PRESENT -> rbPresent.isChecked = true
+                Status.ABSENT -> rbAbsent.isChecked = true
+            }
+
+            memberAttendanceEditViewModel.memberId.value = it.memberId
+        })
+        memberAttendanceEditViewModel.attendanceId.value = arguments?.getLong(KEY_MEMBER_ATTENDANCE_ID) ?: 0
     }
 
     override fun onCreateView(
@@ -49,30 +64,23 @@ class MemberAttendanceEditFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        spinnerMember.adapter = memberArrayAdapter
         edMember.setOnClickListener {
-            spinnerMember.performClick()
-        }
-        spinnerMember.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-            }
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-                memberAttendanceEditViewModel.member.value = memberArrayAdapter.getItem(position)
-            }
-
+           AlertDialog.Builder(requireContext())
+               .setTitle("Choose Member")
+               .setAdapter(memberArrayAdapter) { di, i ->
+                   memberAttendanceEditViewModel.memberId.value = memberArrayAdapter.getItem(i)?.id
+                   di.dismiss()
+               }
+               .show()
         }
 
         radioGroup.setOnCheckedChangeListener(object : RadioGroup.OnCheckedChangeListener {
             override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
-                when(checkedId) {
-                    R.id.rbPresent -> memberAttendanceEditViewModel.attendance.value?.status = Status.PRESENT
-                    R.id.rbAbsent -> memberAttendanceEditViewModel.attendance.value?.status = Status.ABSENT
+                when (checkedId) {
+                    R.id.rbPresent -> memberAttendanceEditViewModel.attendance.value?.status =
+                        Status.PRESENT
+                    R.id.rbAbsent -> memberAttendanceEditViewModel.attendance.value?.status =
+                        Status.ABSENT
                 }
             }
 
@@ -83,5 +91,9 @@ class MemberAttendanceEditFragment : Fragment() {
             findNavController().navigateUp()
         }
 
+        btnDelete.setOnClickListener {
+            memberAttendanceEditViewModel.delete()
+            findNavController().navigateUp()
+        }
     }
 }

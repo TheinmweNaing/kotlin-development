@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.team.attendancekt.R
+import com.team.attendancekt.ui.attendance.edit.MemberAttendanceEditFragment
 import kotlinx.android.synthetic.main.fragment_member_attendance.*
 
 class MemberAttendanceFragment : Fragment() {
@@ -24,9 +25,19 @@ class MemberAttendanceFragment : Fragment() {
         viewModel = ViewModelProviders.of(this)[MemberAttendanceViewModel::class.java]
         viewModel.attendances.observe(this, Observer {
             adapter.submitList(it)
-            Log.v("TAG", it.toString())
         })
         viewModel.attendances
+        adapter.adapterItemClickListener = object : MemberAttendanceAdapter.AdapterItemClickListener {
+            override fun onClick(position: Int) {
+                val args = Bundle()
+                adapter.getItemAt(position)?.id?.let {
+                    args.putLong(MemberAttendanceEditFragment.KEY_MEMBER_ATTENDANCE_ID, it)
+                }
+                findNavController().navigate(R.id.action_memberAttendanceFragment_to_memberAttendanceEditFragment, args)
+            }
+
+        }
+
     }
 
     override fun onCreateView(

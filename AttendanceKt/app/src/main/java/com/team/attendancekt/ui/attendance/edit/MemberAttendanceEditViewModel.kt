@@ -15,7 +15,11 @@ class MemberAttendanceEditViewModel(application: Application) : AndroidViewModel
     private val memberRepo = ServiceLocator.getInstance(application).memberRepo()
 
     val attendanceId = MutableLiveData<Long>()
-    val member = MutableLiveData<Member>()
+    val memberId = MutableLiveData<Int>()
+    val member: LiveData<Member> = Transformations.switchMap(memberId) {
+        memberRepo.getMember(it)
+    }
+
     val attendance: LiveData<Attendance> = Transformations.switchMap(attendanceId) {
         if (it > 0) {
             attendanceRepo.getAttendance(it)
@@ -30,6 +34,12 @@ class MemberAttendanceEditViewModel(application: Application) : AndroidViewModel
     fun save() {
         attendance.value?.also {
             it.memberId = member.value?.id!!
-            attendanceRepo.save(it) }
+            attendanceRepo.save(it)
+        }
     }
+
+    fun delete() {
+        attendance.value?.also { attendanceRepo.delete(it) }
+    }
+
 }
