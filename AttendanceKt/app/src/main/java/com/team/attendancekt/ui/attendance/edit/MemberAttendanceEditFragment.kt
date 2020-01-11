@@ -77,6 +77,9 @@ class MemberAttendanceEditFragment : Fragment() {
                    di.dismiss()
                }
                .show()
+
+            val activity:MainActivity = requireActivity() as MainActivity
+            activity.hideKeyBoard()
         }
 
         radioGroup.setOnCheckedChangeListener(object : RadioGroup.OnCheckedChangeListener {
