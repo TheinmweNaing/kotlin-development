@@ -16,29 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtMember"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:hint="@string/hint_member"
-            app:hintAnimationEnabled="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edMember"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:cursorVisible="false"
-                android:drawableEnd="@drawable/ic_arrow_drop_down_dark"
-                android:inputType="none"
-                android:text="@{vm.member.name}" />
-        </com.google.android.material.textfield.TextInputLayout>
-
         <RadioGroup
             android:id="@+id/radioGroup"
             android:layout_width="0dp"
@@ -46,9 +23,9 @@
             android:layout_marginTop="16dp"
             android:checkedButton="@id/rbPresent"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/txtMember"
-            app:layout_constraintStart_toStartOf="@+id/txtMember"
-            app:layout_constraintTop_toBottomOf="@+id/txtMember">
+            app:layout_constraintEnd_toEndOf="@+id/edMember"
+            app:layout_constraintStart_toStartOf="@+id/edMember"
+            app:layout_constraintTop_toBottomOf="@+id/edMember">
 
             <RadioButton
                 android:id="@+id/rbPresent"
@@ -89,5 +66,21 @@
             app:layout_constraintStart_toStartOf="@+id/radioGroup"
             app:layout_constraintTop_toBottomOf="@+id/radioGroup"
             app:strokeColor="@color/colorPrimary" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edMember"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_border_background"
+            android:cursorVisible="false"
+            android:drawableRight="@drawable/ic_arrow_drop_down_dark"
+            android:hint="@string/hint_member"
+            android:text="@{vm.member.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

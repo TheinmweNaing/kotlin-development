@@ -10,8 +10,18 @@
         </item>
         <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox
         </item>
+        <item name="android:textColorHint">@color/colorHint</item>
         <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialog</item>
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <style name="AppTheme.AppbarOverlay" parent="ThemeOverlay.MaterialComponents.Dark" />
 
     <style name="AppBottomSheetDialog" parent="Theme.MaterialComponents.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/AppBottomDesign</item>

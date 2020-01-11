@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
+import com.team.attendancekt.MainActivity
 import com.team.attendancekt.R
 import com.team.attendancekt.databinding.FragmentAttendanceEditBinding
 import com.team.attendancekt.model.entity.Member
@@ -31,6 +32,10 @@ class MemberAttendanceEditFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val activity:MainActivity = requireActivity() as MainActivity
+        activity.switchToggle(false)
+        activity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         memberAttendanceEditViewModel =
             ViewModelProviders.of(this)[MemberAttendanceEditViewModel::class.java]
         memberArrayAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1)
@@ -95,5 +100,13 @@ class MemberAttendanceEditFragment : Fragment() {
             memberAttendanceEditViewModel.delete()
             findNavController().navigateUp()
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        val activity:MainActivity = requireActivity() as MainActivity
+        activity.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        activity.switchToggle(true)
+        activity.hideKeyBoard()
     }
 }

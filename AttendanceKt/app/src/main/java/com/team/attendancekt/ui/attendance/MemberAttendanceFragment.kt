@@ -20,7 +20,6 @@ class MemberAttendanceFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
         adapter = MemberAttendanceAdapter()
         viewModel = ViewModelProviders.of(this)[MemberAttendanceViewModel::class.java]
         viewModel.attendances.observe(this, Observer {
@@ -61,18 +60,5 @@ class MemberAttendanceFragment : Fragment() {
         fab.setOnClickListener {
             findNavController().navigate(R.id.action_memberAttendanceFragment_to_memberAttendanceEditFragment)
         }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_nav, menu)
-        menu.findItem(R.id.memberAttendanceFragment).isVisible = false
-        super.onCreateOptionsMenu(menu, inflater)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.memberListFragment -> findNavController().navigate(R.id.memberListFragment)
-        }
-        return super.onOptionsItemSelected(item)
     }
 }

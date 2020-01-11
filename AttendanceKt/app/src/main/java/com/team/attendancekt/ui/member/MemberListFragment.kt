@@ -18,7 +18,6 @@ class MemberListFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
         memberAdapter = MemberAdapter()
         viewModel = ViewModelProviders.of(this).get(MemberViewModel::class.java)
         viewModel.members.observe(this, Observer {
@@ -61,18 +60,5 @@ class MemberListFragment : Fragment() {
         fab.setOnClickListener {
             findNavController().navigate(R.id.action_memberListFragment_to_memberEditFragment)
         }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_nav, menu)
-        menu.findItem(R.id.memberListFragment).isVisible = false
-        super.onCreateOptionsMenu(menu, inflater)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.memberAttendanceFragment -> findNavController().navigate(R.id.memberAttendanceFragment)
-        }
-        return super.onOptionsItemSelected(item)
     }
 }

@@ -12,4 +12,6 @@
     <string name="present">Present</string>
     <string name="absent">Absent</string>
     <string name="hint_member">Member</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_closed">Drawer Closed</string>
 </resources>

@@ -27,6 +27,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.room.util.FileUtil
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.zxing.integration.android.IntentIntegrator
+import com.team.attendancekt.MainActivity
 import com.team.attendancekt.R
 import com.team.attendancekt.databinding.MemberEditBinding
 import kotlinx.android.synthetic.main.fragment_member_edit.*
@@ -54,6 +55,10 @@ class MemberEditFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val activity: MainActivity = requireActivity() as MainActivity
+        activity.switchToggle(false)
+        activity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         memberEditViewModel = ViewModelProviders.of(this).get(MemberEditViewModel::class.java)
 
         val id = arguments?.getInt(KEY_MEMBER_ID) ?: 0
@@ -101,6 +106,14 @@ class MemberEditFragment : Fragment() {
             }
             showBottomSheetDialog()
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        val activity: MainActivity = requireActivity() as MainActivity
+        activity.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        activity.switchToggle(true)
+        activity.hideKeyBoard()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
