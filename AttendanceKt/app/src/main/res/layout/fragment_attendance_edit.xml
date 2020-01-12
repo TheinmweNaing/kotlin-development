@@ -76,7 +76,7 @@
             android:layout_marginEnd="16dp"
             android:background="@drawable/edit_text_border_background"
             android:cursorVisible="false"
-            android:drawableRight="@drawable/ic_arrow_drop_down_dark"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_dark"
             android:hint="@string/hint_member"
             android:text="@{vm.member.name}"
             app:layout_constraintEnd_toEndOf="parent"

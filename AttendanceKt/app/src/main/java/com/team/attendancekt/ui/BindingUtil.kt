@@ -4,7 +4,11 @@ import android.net.Uri
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.RadioGroup
+import android.widget.TextView
 import androidx.databinding.*
+import com.team.attendancekt.R
+import com.team.attendancekt.model.entity.ChatMessage
+import com.team.attendancekt.model.entity.MessageType
 
 class BindingUtil {
 
@@ -37,6 +41,21 @@ class BindingUtil {
         @BindingAdapter("android:checkedButton")
         fun setCheckedButton(radioGroup: RadioGroup, id: Int) {
             if (id != radioGroup.checkedRadioButtonId) radioGroup.check(id)
+        }
+
+        @JvmStatic
+        @BindingAdapter("android:text")
+        fun setMessage(textView: TextView, msg: ChatMessage?) {
+            msg?.also {
+                when (it.messageType) {
+                    MessageType.JOIN -> textView.text =
+                        textView.context.getString(R.string.chat_info_join, it.sender)
+                    MessageType.LEAVE -> textView.text =
+                        textView.context.getString(R.string.chat_info_leave, it.sender)
+                    else -> {
+                    }
+                }
+            }
         }
     }
 }

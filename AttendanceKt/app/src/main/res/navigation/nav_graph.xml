@@ -32,4 +32,16 @@
         android:name="com.team.attendancekt.ui.attendance.edit.MemberAttendanceEditFragment"
         android:label="MemberAttendanceEditFragment"
         tools:layout="@layout/fragment_attendance_edit"/>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.team.attendancekt.ui.chat.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_fragmentChatting"
+            app:destination="@id/fragmentChatting" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentChatting"
+        android:name="com.team.attendancekt.ui.chat.FragmentChatting"
+        android:label="FragmentChatting" />
 </navigation>
