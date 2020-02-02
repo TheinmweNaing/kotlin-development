@@ -8,5 +8,14 @@
         android:id="@+id/RouteChoiceFragment"
         android:name="com.example.busticketbooking.ui.booking.RouteChoiceFragment"
         android:label="RouteChoiceFragment"
-        tools:layout="@layout/fragment_route_choice" />
+        tools:layout="@layout/fragment_route_choice">
+        <action
+            android:id="@+id/action_RouteChoiceFragment_to_seatSelectionFragment"
+            app:destination="@id/seatSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seatSelectionFragment"
+        android:name="com.example.busticketbooking.ui.booking.SeatSelectionFragment"
+        android:label="SeatSelectionFragment"
+        tools:layout="@layout/fragment_vip_seat_selection" />
 </navigation>

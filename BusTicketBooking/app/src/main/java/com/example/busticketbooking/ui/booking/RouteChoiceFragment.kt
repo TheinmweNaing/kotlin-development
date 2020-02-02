@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.busticketbooking.R
 import kotlinx.android.synthetic.main.fragment_route_choice.*
 import org.joda.time.LocalDate
@@ -57,6 +58,10 @@ class RouteChoiceFragment : Fragment() {
                 v.requestFocus()
             }
             return@setOnTouchListener true
+        }
+
+        btnSearch.setOnClickListener {
+            findNavController().navigate(R.id.action_RouteChoiceFragment_to_seatSelectionFragment)
         }
     }
 }
