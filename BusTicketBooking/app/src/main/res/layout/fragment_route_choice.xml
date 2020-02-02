@@ -20,7 +20,8 @@
         <androidx.appcompat.widget.AppCompatAutoCompleteTextView
             android:id="@+id/auto_edit_from"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:completionThreshold="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -33,10 +34,11 @@
         app:layout_constraintStart_toStartOf="@+id/textInputLayout"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
-        <AutoCompleteTextView
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
             android:id="@+id/auto_edit_to"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:completionThreshold="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -53,6 +55,7 @@
             android:id="@+id/ed_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:cursorVisible="false"
             android:drawableEnd="@drawable/ic_today_dark_24dp"
             android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -71,6 +74,7 @@
             android:id="@+id/ed_seats"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:cursorVisible="false"
             android:drawableEnd="@drawable/ic_arrow_drop_down_dark_24dp"
             android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
