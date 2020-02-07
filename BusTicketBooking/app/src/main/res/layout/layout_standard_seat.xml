@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton37"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton38"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton38"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton38"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton36" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton2"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton2"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton3"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton3"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton3"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton4"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton4"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton4"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton2" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton5"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton5"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton5"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton3" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton6"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton6"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton6"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton4" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton7"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton7"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton7"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton5" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton8"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton8"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton8"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton6" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton9"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton9"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton9"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton7" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton10"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton10"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton10"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton8" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toggleButton20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton9" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton12"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton12"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton12"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton13"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton13"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton13"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton11" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton14"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton14"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton14"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton12" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton15"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton15"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton15"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton13" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton16"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton16"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton16"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton14" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton16"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton17"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton17"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton17"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton15" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton17"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton18"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton18"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton18"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton16" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton18"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton19"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton19"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton19"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton17" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton19"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton20"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton20"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton20"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton18" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton20"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/toggleButton10"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton19" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton21"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton22"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton22"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton22"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton22"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton23"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton23"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton23"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton21" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton23"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton24"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton24"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton24"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton22" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton24"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton25"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton25"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton25"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton23" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton25"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton26"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton26"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton26"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton24" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton26"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton27"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton27"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton27"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton25" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton27"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton28"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton28"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton28"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton26" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton28"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton29"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton29"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton29"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton27" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton29"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton30"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton30"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton30"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton28" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton30"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toggleButton40"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton29" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton31"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton32"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton32"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton32"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton32"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton33"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton33"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton33"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton31" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton33"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton34"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton34"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton34"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton32" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton34"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton35"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton35"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton35"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton33" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton35"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton36"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton36"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton36"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton34" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton36"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton37"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton37"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton37"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton35" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton38"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton39"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton39"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton39"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton37" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton39"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton40"
+        app:layout_constraintEnd_toEndOf="@+id/toggleButton40"
+        app:layout_constraintStart_toStartOf="@+id/toggleButton40"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton38" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggleButton40"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/seat_button_drawable"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/toggleButton30"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton39" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.57" />
+</androidx.constraintlayout.widget.ConstraintLayout>
