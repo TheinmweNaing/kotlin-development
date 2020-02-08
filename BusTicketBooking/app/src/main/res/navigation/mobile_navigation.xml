@@ -17,5 +17,5 @@
         android:id="@+id/seatSelectionFragment"
         android:name="com.example.busticketbooking.ui.booking.SeatSelectionFragment"
         android:label="SeatSelectionFragment"
-        tools:layout="@layout/fragment_vip_seat_selection" />
+        tools:layout="@layout/fragment_seat_selection" />
 </navigation>
