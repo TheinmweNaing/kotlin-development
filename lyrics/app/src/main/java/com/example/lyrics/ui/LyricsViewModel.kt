@@ -15,19 +15,21 @@ class LyricsViewModel(application: Application) : AndroidViewModel(application) 
     private val service: LyricsService
     private val compositeDisposable = CompositeDisposable()
     var lyrics = MutableLiveData<String>()
+    var result = MutableLiveData<Boolean>()
 
     init {
         service = LyricsService(RetrofitManager.create(LyricsAPI::class.java))
     }
 
-    fun loadLyrics(artist: String, title: String) {
+    fun loadLyrics(artist: String?, title: String?) {
         val disposable = service.getLyrics(artist, title)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
                 lyrics.value = it.lyrics
+                result.value = true
             }, {
-                //TODO
+                result.value = false
             })
         compositeDisposable.add(disposable)
     }

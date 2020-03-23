@@ -6,7 +6,7 @@ import io.reactivex.Observable
 
 class LyricsService(private val api: LyricsAPI) {
 
-    fun getLyrics(artist: String, title: String): Observable<LyricsData> {
+    fun getLyrics(artist: String?, title: String?): Observable<LyricsData> {
         return api.getLyrics(artist, title)
     }
 }

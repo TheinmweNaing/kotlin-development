@@ -9,7 +9,7 @@ interface LyricsAPI {
 
     @GET("{artist}/{title}")
     fun getLyrics(
-        @Path("artist") artist: String,
-        @Path("title") title: String
+        @Path("artist") artist: String?,
+        @Path("title") title: String?
     ): Observable<LyricsData>
 }
