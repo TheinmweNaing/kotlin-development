@@ -26,29 +26,9 @@ class LyricsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
+
         val activity: MainActivity = requireActivity() as MainActivity
         activity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        //progressBar.visibility = View.VISIBLE
-
-        viewModel = ViewModelProvider(this)[LyricsViewModel::class.java]
-
-        val artist = arguments?.getString(ARTIST)
-        val title = arguments?.getString(TITLE)
-
-        viewModel.loadLyrics(artist, title)
-        viewModel.lyrics.observe(this, Observer {
-            //  progressBar.visibility = View.GONE
-            txtLyrics.text = it
-            txtArtist.text = artist
-            txtTitle.text = title
-        })
-
-        viewModel.result.observe(this, Observer {
-            if (!it) view?.apply {
-                Snackbar.make(this, "Not found.", Snackbar.LENGTH_SHORT).show()
-            }
-        })
-
     }
 
     override fun onCreateView(
@@ -59,10 +39,29 @@ class LyricsFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_lyrics, container, false)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        val activity: MainActivity = requireActivity() as MainActivity
-        activity.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        progressBar.visibility = View.VISIBLE
+        viewModel = ViewModelProvider(this)[LyricsViewModel::class.java]
+
+        val artist = arguments?.getString(ARTIST)
+        val title = arguments?.getString(TITLE)
+
+        viewModel.loadLyrics(artist, title)
+        viewModel.lyrics.observe(viewLifecycleOwner, Observer {
+            progressBar.visibility = View.GONE
+            txtLyrics.text = it
+            txtArtist.text = artist
+            txtTitle.text = title
+        })
+
+        viewModel.result.observe(viewLifecycleOwner, Observer {
+            progressBar.visibility = View.GONE
+            if (!it) view?.apply {
+                Snackbar.make(this, "Not found.", Snackbar.LENGTH_SHORT).show()
+            }
+        })
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -70,5 +69,11 @@ class LyricsFragment : Fragment() {
             android.R.id.home -> findNavController().popBackStack()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        val activity: MainActivity = requireActivity() as MainActivity
+        activity.supportActionBar?.setDisplayHomeAsUpEnabled(false)
     }
 }
