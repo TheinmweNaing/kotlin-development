@@ -3,4 +3,6 @@
     <string name="artist">Artist*</string>
     <string name="song_title">Song Title*</string>
     <string name="search">Search</string>
+    <string name="error_artist">Please Enter Artist!</string>
+    <string name="error_title">Please Enter Song Title!</string>
 </resources>

@@ -28,12 +28,12 @@ class SearchFragment : Fragment() {
             val title = edTitle.text.toString()
             var count = 0
             if (artist.isEmpty()) {
-                layoutArtist.setError("Please Enter Artist!")
+                layoutArtist.setError(getString(R.string.error_artist))
                 count++
             }
 
             if (title.isEmpty()) {
-                layoutTitle.setError("Please Enter Song Title!")
+                layoutTitle.setError(getString(R.string.error_title))
                 count++
             }
 
