@@ -1,61 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutArtist"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:hint="@string/artist"
-        app:endIconMode="clear_text"
-        app:errorEnabled="true"
-        app:errorTextColor="@android:color/holo_red_dark"
-        app:helperText="*Required"
-        app:helperTextEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edArtist"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutArtist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/artist"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:errorTextColor="@android:color/holo_red_dark"
+            app:helperText="*Required"
+            app:helperTextEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="@string/song_title"
-        app:endIconMode="clear_text"
-        app:errorEnabled="true"
-        app:errorTextColor="@android:color/holo_red_dark"
-        app:helperText="*Required"
-        app:helperTextEnabled="true"
-        app:layout_constraintEnd_toEndOf="@+id/layoutArtist"
-        app:layout_constraintStart_toStartOf="@+id/layoutArtist"
-        app:layout_constraintTop_toBottomOf="@+id/layoutArtist">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edArtist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/song_title"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:errorTextColor="@android:color/holo_red_dark"
+            app:helperText="*Required"
+            app:helperTextEnabled="true"
+            app:layout_constraintEnd_toEndOf="@+id/layoutArtist"
+            app:layout_constraintStart_toStartOf="@+id/layoutArtist"
+            app:layout_constraintTop_toBottomOf="@+id/layoutArtist">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSearch"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/search"
-        app:layout_constraintEnd_toEndOf="@+id/layoutTitle"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTitle" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSearch"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/search"
+            app:layout_constraintEnd_toEndOf="@+id/layoutTitle"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

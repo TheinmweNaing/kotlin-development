@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="obj"
+            type="com.example.lyrics.model.dto.LyricsData" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Same old love" />
+
+        <TextView
+            android:id="@+id/txtArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            tools:text="Selena Gomez" />
+
+        <TextView
+            android:id="@+id/txtLyrics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scrollbars="vertical"
+            android:text="@{obj.lyrics}" />
+    </LinearLayout>
+</layout>
+
