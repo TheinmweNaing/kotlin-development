@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">lyrics</string>
+    <string name="app_name">Lyrics</string>
     <string name="artist">Artist*</string>
     <string name="song_title">Song Title*</string>
     <string name="search">Search</string>
