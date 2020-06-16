@@ -28,12 +28,12 @@ class SearchFragment : Fragment() {
             val title = edTitle.text.toString()
             var count = 0
             if (artist.isEmpty()) {
-                layoutArtist.setError(getString(R.string.error_artist))
+                layoutArtist.error = getString(R.string.error_artist)
                 count++
             }
 
             if (title.isEmpty()) {
-                layoutTitle.setError(getString(R.string.error_title))
+                layoutTitle.error = getString(R.string.error_title)
                 count++
             }
 
@@ -47,7 +47,7 @@ class SearchFragment : Fragment() {
             edArtist.addTextChangedListener(object : TextWatcher {
                 override fun afterTextChanged(s: Editable?) {
                     if (s?.isNotEmpty()!!) {
-                        layoutArtist.setError(null)
+                        layoutArtist.error = null
                     }
                 }
 
@@ -66,7 +66,7 @@ class SearchFragment : Fragment() {
             edTitle.addTextChangedListener(object : TextWatcher {
                 override fun afterTextChanged(s: Editable?) {
                     if (s?.isNotEmpty()!!) {
-                        layoutTitle.setError(null)
+                        layoutTitle.error = null
                     }
                 }
 
